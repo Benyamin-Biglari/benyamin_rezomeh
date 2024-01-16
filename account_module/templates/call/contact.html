@@ -5,7 +5,6 @@
 
 {% block heather %}
 
-
     <header id="header-wrap">
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
@@ -103,6 +102,7 @@
                         {% csrf_token %}
                         {{ form.desc }}
                     </div>
+                    
                       <div class="submit-button">
                         <button class="btn btn-common" id="submit" type="submit">ارسال پیام</button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -112,6 +112,9 @@
                   </div>
                 </form>
               </div>
+              {% for foo in img %}
+              <img src="{{ foo.image.url }}" alt="" style="height: 350px; width: 450px; margin-right: 50px;">
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -119,7 +122,7 @@
      </section>
     <div>
     <div style="margin-right: 50px">
-             <h2 style="margin-left: 600px">تماس با من:</h2>
+             <h3 style="margin-left: 600px">تماس با من:</h2>
              <p style="margin-left: 450px">در صورت داشتن هرگونه انتقاد و پیشنهاد می توانید از طریق فرم زیر با من در ارتباط باشید.</p><br><br>
              </div>
              <div style="display: flex ;margin: 60px">

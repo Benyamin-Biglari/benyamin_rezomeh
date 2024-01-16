@@ -10,3 +10,7 @@ class register_model(models.Model):
 
     def __str__(self):
         return self.username
+    
+
+class call_img(models.Model):
+    image=models.ImageField(upload_to='media/person_image',null=True)

@@ -37,3 +37,4 @@ class work_place(models.Model):
     phone_number = models.CharField(max_length=100, null=True)
 class my_work_img(models.Model):
     img=models.ImageField(upload_to="media/person_image",null=True)
+

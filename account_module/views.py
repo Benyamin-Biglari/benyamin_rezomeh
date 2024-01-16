@@ -8,7 +8,10 @@ from django.shortcuts import redirect
 class register(View):
     def get(self,request):
         form_reg=form.registerform()
-        return render(request,'call/contact.html',context={"form":form_reg})
+        img=models.call_img.objects.all()
+        return render(request,'call/contact.html',context={"form":form_reg,
+                                                           "img":img})
+    
 
     def post(self,request):
         form_reg=form.registerform(request.POST)
