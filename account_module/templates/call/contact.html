@@ -1,0 +1,135 @@
+{% extends 'product/base.html' %}
+{% load static %}
+
+
+
+{% block heather %}
+
+
+    <header id="header-wrap">
+      <!-- Navbar Start -->
+      <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+              <span class="icon-menu"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img src="{% static 'assets/img/logo.png' %}" alt=""></a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">
+                  صفحه اصلی
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#about">
+                  درباره من
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#services">
+                  خدمات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#resume">
+                  رزومه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/#portfolios">
+                نمونه کار ها
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">
+                  تماس با من
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Start -->
+        <ul class="onepage-nev mobile-menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">about</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#resume">resume</a>
+          </li>
+          <li>
+            <a href="#portfolio">Work</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <!-- Mobile Menu End -->
+      </nav>
+{% endblock %}
+
+{% block body %}
+     <section id="contact" class="section-padding">
+      <div class="contact-form">
+        <div class="container">
+          <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <div class="contact-block">
+                <h2>فرم تماس</h2>
+                <form id="contactForm" method="post" action="">
+                  <div class="row">
+                    <div class="col-md-6">
+                        {% csrf_token %}
+                        {{ form.username }}
+                    </div>
+                    <div class="col-md-6">
+                        {% csrf_token %}
+                        {{ form.email }}
+                    </div>
+                    <div class="col-md-12">
+                        {% csrf_token %}
+                        {{ form.desc }}
+                    </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common" id="submit" type="submit">ارسال پیام</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    <div>
+    <div style="margin-right: 50px">
+             <h2 style="margin-left: 600px">تماس با من:</h2>
+             <p style="margin-left: 450px">در صورت داشتن هرگونه انتقاد و پیشنهاد می توانید از طریق فرم زیر با من در ارتباط باشید.</p><br><br>
+             </div>
+             <div style="display: flex ;margin: 60px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/><path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"/></svg>
+                 <h3 style=" color: #8502d6">شماره تماس : 09036775672</h3>
+             </div>
+            <div style="display: flex ;margin: 60px" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z"/></svg>
+                <h2 style="color: #8502d6">ایمیل:tjxlsiaupsculjjbxu@cazlg.com </h2>
+            </div>
+
+    </div>
+{% endblock body %}
