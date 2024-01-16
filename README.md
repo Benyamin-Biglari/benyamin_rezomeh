@@ -1,6 +1,3 @@
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+# REZOMEH
 
-==rezomeh==
 ### This is my rezomeh
-
-
