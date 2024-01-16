@@ -1,4 +1,6 @@
-# rezomeh
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+
+==rezomeh==
 ### This is my rezomeh
 
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
